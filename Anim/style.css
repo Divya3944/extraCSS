@@ -4,9 +4,7 @@
     box-sizing: border-box;
     min-height: 40px;
 }
-div.whole{
-    min-height: 4svh;
-}
+
 div.container{
     display: flex;
     align-items: center;
@@ -18,78 +16,75 @@ div.container div.ball{
     width: 100px;
     height: 100px;
     background-color: aqua;
-    transition-duration: 1s;
-    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-div.container div.ball ul li{
-    background-color: rgb(77, 129, 226);
     cursor: pointer;
-    transform: scale(2);
-}
-
-/*---------------*/
-div.cool{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    background-color:crimson;
-}
-div.cool div.ball{
-    width: 100px;
-    height: 100px;
-    background-color: saddlebrown;
-    transition-duration: 1s;
-    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-div.cool div.ball:hover{
-
-    background-color: rgb(201, 131, 27);
-    cursor: pointer;
-    border-radius: 50%;
-
-}
-/*----------------------------*/
-div.ltor{
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-    height: 40vh;
-    background-color:rgb(13, 19, 13);
-}
-div.ltor div.bad{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(230, 23, 23);
-    transition-duration: 1s;
     }
-div.ltor div.bad:hover{
+div.ball{
 
-    background-color: rgb(221, 17, 143);
-    cursor: pointer;
-    transform: translate(500px);
+    animation-duration: 2s;
+    animation-name: stylish-rotate;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    margin: 10px;
+    border-radius: 10px;
+    animation: bounce 1s stylish-rotate;
+    animation: stylish-rotate 1s ease infinite;
+}
+
+div.ball:nth-child(2){
+    animation-delay: 1.2s;
+    animation-name: bounce;
+    animation-duration: 2s;
+}
+div.ball:nth-child(3){
+    animation-delay: 1.6s;
 
 }
-/*-----------------*/
-div.left{
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-    height: 40vh;
-    background-color:rgb(223, 219, 7);
+div.ball:nth-child(4){
+    animation-delay: 1.2s;
+    animation-name: bounce;
+    animation-duration: 2s;
 }
-div.left div.bad{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(219, 15, 15);
-    transition-duration: 3s;
-    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+div.ball:nth-child(5){
+    animation-delay: 2.4s;
 }
-div.left:hover div.bad{
-
-    background-color: rgb(153, 114, 47);
-    cursor: pointer;
-    transform: translate(500px);
-
+@keyframes bounce{
+    0%{}
+    25%{
+        transform: translateY(100px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-100px);
+    }
+    100%{
+    }
+}
+@keyframes stylish-rotate{
+    0%{}
+    14%{
+        background-color:violet;
+    }
+    28%{
+     background: indigo;   
+    }
+    42%{
+        background: blue;
+    }
+    56%{
+        background: green;
+    }
+    70%{
+        background: yellow;
+    }
+    84%{
+        background: orange ;
+    }
+    100%{
+        transform: rotateZ(360deg);
+        background: red;
+    }
 }
