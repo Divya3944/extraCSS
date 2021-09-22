@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-color: black;
+}
+div.container div.ball{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition-duration: 1s;
+    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+div.container div.ball:hover{
+
+    background-color: rgb(77, 129, 226);
+    cursor: pointer;
+    transform: scale(2);
+}div.cool div.ball{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition-duration: 3s;
+    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+div.cool div.ball:hover{
+
+    background-color: rgb(77, 129, 226);
+    cursor: pointer;
+    border-radius: 50%;
+
+}
