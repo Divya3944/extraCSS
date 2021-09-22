@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
+    min-height: 40px;
+}
+div.whole{
+    min-height: 4svh;
 }
 div.container{
     display: flex;
@@ -17,22 +21,75 @@ div.container div.ball{
     transition-duration: 1s;
     transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-div.container div.ball:hover{
 
+div.container div.ball ul li{
     background-color: rgb(77, 129, 226);
     cursor: pointer;
     transform: scale(2);
-}div.cool div.ball{
+}
+
+/*---------------*/
+div.cool{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-color:crimson;
+}
+div.cool div.ball{
     width: 100px;
     height: 100px;
-    background-color: aqua;
-    transition-duration: 3s;
+    background-color: saddlebrown;
+    transition-duration: 1s;
     transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 div.cool div.ball:hover{
 
-    background-color: rgb(77, 129, 226);
+    background-color: rgb(201, 131, 27);
     cursor: pointer;
     border-radius: 50%;
+
+}
+/*----------------------------*/
+div.ltor{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    height: 40vh;
+    background-color:rgb(13, 19, 13);
+}
+div.ltor div.bad{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 23, 23);
+    transition-duration: 1s;
+    }
+div.ltor div.bad:hover{
+
+    background-color: rgb(221, 17, 143);
+    cursor: pointer;
+    transform: translate(500px);
+
+}
+/*-----------------*/
+div.left{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    height: 40vh;
+    background-color:rgb(223, 219, 7);
+}
+div.left div.bad{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(219, 15, 15);
+    transition-duration: 3s;
+    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+div.left:hover div.bad{
+
+    background-color: rgb(153, 114, 47);
+    cursor: pointer;
+    transform: translate(500px);
 
 }
